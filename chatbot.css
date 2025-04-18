@@ -1,0 +1,237 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  background: #f0fff0;
+  background-image: url(/green-tea-bud-leaves-green-tea-plantations-morning.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #333;
+}
+
+
+.navbar {
+  background-color: #2e7d32;
+  color: white;
+  padding: 1rem 2rem;
+  position: relative;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: background-color 0.3s ease;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #b9d22c;
+  left: 0;
+  bottom: -4px;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+  transform: rotate(90deg);
+}
+
+
+.chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  width: 500px;
+  background: #ffffff;
+  border: 2px solid #4caf50;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  overflow: hidden;
+  z-index: 999;
+  font-family: Arial, sans-serif;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.chat-header {
+  background-color: #4caf50;
+  background-image: url(/peasant-with-tractor-working-cornfield-crop_181624-58745.jpg);
+  background-size: cover;
+  color: rgb(238, 221, 37);
+  padding: 99px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.chat-box {
+  height: 400px;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 14px;
+  color: #333;
+}
+
+.chat-box p {
+  margin: 8px 0;
+}
+
+.chat-box .user {
+  text-align: right;
+  color: #2e7d32;
+}
+
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+.chat-input input:focus {
+  background-color: #f1fff1;
+}
+
+.chat-input button {
+  background: #4caf50;
+  border: none;
+  color: white;
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.3s;
+}
+
+.chat-input button:hover {
+  transform: scale(1.05);
+  background-color: #388e3c;
+}
+
+
+.footer {
+  background-color: #1b5e20;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 2rem;
+  margin-top: 50rem;
+}
+
+.footer-links a {
+  margin: 0 1rem;
+  color: #a5d6a7;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background-color: #2e7d32;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    display: none;
+    animation: slideDown 0.4s ease forwards;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  @keyframes slideDown {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  .nav-links li {
+    margin-bottom: 1rem;
+  }
+}
+#chatBox
+{
+  display: flex;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: medium;
+  flex-direction: column-reverse;
+}
+#userc
+{
+align-self: end;
+margin-top: 1rem;
+margin-bottom: 1rem;
+border: 1px solid gray;
+padding: 0.4rem;
+border-radius: 0.7rem;
+border-top-right-radius: 0rem;
+width: fit-content;
+}
+#botb
+{
+margin-top: 1rem;
+margin-bottom: 1rem;
+border: 1px solid gray;
+align-self: flex-start;
+padding: 0.4rem;
+border-radius: 0.7rem;
+border-top-left-radius: 0rem;
+}

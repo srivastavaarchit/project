@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FarmAI - Services</title>
+  <link rel="stylesheet" href="service.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <div class="logo">🌱 FarmAI</div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+      
+        <li><a href="#" class="active">Services</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Services Section -->
+  <div class="services-container">
+    <h1>FarmAI - Expert Services</h1>
+    <p>Connect with experts and get on-field soil testing or advice for your farm.</p>
+
+    <!-- Service Cards -->
+    <div class="service-cards">
+      <div class="card">
+        <h2>📞 Expert Consultation</h2>
+        <p>Book a one-on-one paid call with an agricultural expert for personalized advice on crop selection, disease control, or fertilization.</p>
+        <button class="btn" onclick="openCallModal()">Book Paid Call (₹99)</button>
+      </div>
+
+      <div class="card">
+        <h2>🚜 On-field Soil Testing</h2>
+        <p>Request a team to visit your farm, test the soil quality, and recommend the best crops and fertilizers for your region.</p>
+        <button class="btn">Schedule Team Visit</button>
+      </div>
+
+      <div class="card">
+        <h2>🌾 Crop Disease Consultation</h2>
+        <p>Our experts can analyze crop diseases and offer solutions to mitigate the problem effectively.</p>
+        <button class="btn">Consult an Expert</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Helpline Section -->
+  <section class="helpline">
+    <div class="helpline-container">
+      <h2>📞 National Agriculture Helpline</h2>
+      <p><strong>Toll Free:</strong> 1800-180-1551</p>
+      <p><strong>Email:</strong> support@farmai.in</p>
+    </div>
+  </section>
+
+  <!-- Modal for Paid Call -->
+  <div id="callModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeCallModal()">&times;</span>
+      <h2>Book Paid Call</h2>
+      <p>To book your paid consultation call, please enter your details below:</p>
+      <form id="callForm">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="phone">Your Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+        
+        <button type="submit" class="btn">Confirm Booking</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 FarmAI. All rights reserved.</p>
+  </footer>
+
+  <script src="services.js"></script>
+
+</body>
+</html>

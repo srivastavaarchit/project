@@ -1,0 +1,253 @@
+
+/* Root variables for theming */
+:root {
+  --primary-color: #2e7d32;
+  --primary-dark: #1b5e20;
+  --primary-light: #43a047;
+  --accent-color: #c8e6c9;
+  --bg-light: #e8f5e9;
+  --text-color: #333;
+  --white: #fff;
+  --transition-standard: all 0.3s ease;
+  --border-radius: 6px;
+  --box-shadow: 0 0 5px rgba(46, 125, 50, 0.3);
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-xxl: 3rem;
+}
+
+/* Base styles with modern reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: #f0fff4;
+  background-image: url(/detail-rice-plant-sunset-valencia-with-plantation-out-focus-rice-grains-plant-seed_181624-25838.avif);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--text-color);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+/* Layout components with CSS Grid */
+.navbar {
+  background: var(--primary-color);
+  padding: var(--spacing-md) var(--spacing-xl);
+  color: var(--white);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--spacing-md);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: flex-end;
+}
+
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+  position: relative;
+  padding: var(--spacing-sm) 0;
+}
+
+/* Modern link underline animation */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--accent-color);
+}
+
+/* Main content area */
+.main-section {
+  padding: var(--spacing-xxl) var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.input-box {
+  margin-top: var(--spacing-xl);
+  display: flex;
+  gap: var(--spacing-md);
+  width: 100%;
+  max-width: 600px;
+  justify-content: center;
+}
+
+input {
+  padding: 0.8rem;
+  font-size: 1rem;
+  flex: 1;
+  border-radius: var(--border-radius);
+  border: 1px solid #ccc;
+  transition: var(--transition-standard);
+}
+
+input:focus {
+  border-color: var(--primary-color);
+  box-shadow: var(--box-shadow);
+  outline: none;
+}
+
+button {
+  padding: 0.8rem 1.2rem;
+  background-color: var(--primary-light);
+  color: var(--white);
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition-standard);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Output display area */
+.output-section {
+  margin: var(--spacing-xl) auto 0;
+  width: 100%;
+  max-width: 500px;
+  background: var(--bg-light);
+  padding: var(--spacing-lg);
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  animation: slideUp 0.5s ease;
+}
+
+.output-section ul {
+  padding-left: 20px;
+  max-height: 900px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-light) var(--bg-light);
+}
+
+.output-section ul::-webkit-scrollbar {
+  width: 8px;
+}
+
+.output-section ul::-webkit-scrollbar-thumb {
+  background-color: var(--primary-light);
+  border-radius: 10px;
+}
+
+.output-section ul::-webkit-scrollbar-track {
+  background-color: var(--bg-light);
+}
+
+.footer {
+  background: var(--primary-dark);
+  color: var(--white);
+  text-align: center;
+  padding: var(--spacing-md);
+  margin-top: auto;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive design with modern media queries */
+@media screen and (max-width: 768px) {
+  .navbar {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+  
+  .nav-links {
+    justify-content: flex-start;
+    overflow-x: auto;
+    padding-bottom: var(--spacing-sm);
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .input-box {
+    flex-direction: column;
+  }
+  
+  .output-section {
+    margin-top: var(--spacing-md);
+  }
+}
+
+/* For print media */
+@media print {
+  body {
+    background: white;
+  }
+  
+  .navbar, .input-box, .footer {
+    display: none;
+  }
+  
+  .output-section {
+    box-shadow: none;
+    margin: 0;
+    max-height: none;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion) {
+  * {
+    animation-duration: 0.001s !important;
+    transition-duration: 0.001s !important;
+  }
+}

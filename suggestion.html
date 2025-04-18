@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FarmAI - Crop Suggestion</title>
+  <link rel="stylesheet" href="suggestion.css" />
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">🌾 FarmAI</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mandi.html">Mandi Rates</a></li>
+        <li><a href="suggestion.css" class="active">Crop Suggestion</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="main-section">
+    <h1>Get Crop Suggestions by PIN Code</h1>
+    <p>Enter your PIN code to get suitable crops, temperature & precautions.</p>
+
+    <div class="input-box">
+      <input type="text" id="pincode" placeholder="Enter PIN Code" maxlength="6" />
+      <button onclick="getSuggestions()">Suggest</button>
+    </div>
+
+    <div id="output" class="output-section"></div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 FarmAI. All rights reserved.</p>
+  </footer>
+
+  <script src="suggestion.js"></script>
+</body>
+</html>

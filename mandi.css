@@ -1,0 +1,191 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url(/detail-rice-plant-sunset-valencia-with-plantation-out-focus-rice-grains-plant-seed_181624-25838.avif);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #333;
+  transition: background 0.5s ease;
+}
+
+* {
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar {
+  background-color: #2e7d32;
+  padding: 1rem 10rem;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: white;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+  width: 100%;
+}
+
+.mandi-section {
+  padding: 3rem 2rem;
+  text-align: center;
+  animation: fadeIn 1s ease;
+}
+
+.mandi-section h1 {
+  color: #09650e;
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.search-box {
+  margin: 2rem 0;
+}
+
+.search-box input {
+  padding: 0.6rem;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: #2e7d32;
+  box-shadow: 0 0 5px rgba(46, 125, 50, 0.4);
+}
+
+.search-box button {
+  padding: 0.6rem 1rem;
+  background-color: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-box button:hover {
+  background-color: #1b5e20;
+}
+
+.rate-table {
+  max-width: 1000px;
+  max-height: 1600px;
+  background-color: antiquewhite;
+  margin: auto;
+  margin-top: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 0.8s ease;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1.5rem;
+}
+
+th, td {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  text-align: left;
+  transition: background-color 0.3s;
+}
+
+tr:hover td {
+  background-color: #f1f8e9;
+}
+
+th {
+  background-color: #c8e6c9;
+  color: #1b5e20;
+}
+
+.footer {
+  background-color: #1b5e20;
+  color: white;
+  text-align: center;
+  padding: 2rem 2rem;
+  margin-top: 18rem;
+  animation: fadeIn 1.2s ease;
+}
+
+.footer-links a {
+  margin: 0 1rem;
+  color: #a5d6a7;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  color: #ffffff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
