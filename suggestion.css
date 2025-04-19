@@ -1,5 +1,5 @@
 
-/* Root variables for theming */
+
 :root {
   --primary-color: #2e7d32;
   --primary-dark: #1b5e20;
@@ -18,7 +18,6 @@
   --spacing-xxl: 3rem;
 }
 
-/* Base styles with modern reset */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -39,7 +38,7 @@ body {
   grid-template-rows: auto 1fr auto;
 }
 
-/* Layout components with CSS Grid */
+
 .navbar {
   background: var(--primary-color);
   padding: var(--spacing-md) var(--spacing-xl);
@@ -71,7 +70,7 @@ body {
   padding: var(--spacing-sm) 0;
 }
 
-/* Modern link underline animation */
+
 .nav-links a::after {
   content: '';
   position: absolute;
@@ -150,7 +149,6 @@ button:active {
   transform: translateY(0);
 }
 
-/* Output display area */
 .output-section {
   margin: var(--spacing-xl) auto 0;
   width: 100%;
@@ -192,7 +190,7 @@ button:active {
   margin-top: auto;
 }
 
-/* Animations */
+
 @keyframes slideUp {
   from {
     opacity: 0;
@@ -204,7 +202,7 @@ button:active {
   }
 }
 
-/* Responsive design with modern media queries */
+
 @media screen and (max-width: 768px) {
   .navbar {
     grid-template-columns: 1fr;
@@ -227,7 +225,7 @@ button:active {
   }
 }
 
-/* For print media */
+
 @media print {
   body {
     background: white;
@@ -244,7 +242,7 @@ button:active {
   }
 }
 
-/* Accessibility improvements */
+
 @media (prefers-reduced-motion) {
   * {
     animation-duration: 0.001s !important;

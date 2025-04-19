@@ -1,4 +1,4 @@
-/* Global Styles */
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -11,7 +11,7 @@ a {
   color: inherit;
 }
 
-/* Navbar */
+
 .navbar {
   background-color: #2e7d32;
   padding: 1rem 5rem;
@@ -64,7 +64,7 @@ a {
   color: #555;
 }
 
-/* Product Grid */
+
 .products-container {
   display: flex;
   flex-wrap: wrap;
@@ -72,7 +72,7 @@ a {
   justify-content: center;
 }
 
-/* Product Box */
+
 .product-box {
   background: white;
   border-radius: 12px;
@@ -127,7 +127,7 @@ a {
   background-color: #1b5e20;
 }
 
-/* Add Product Box */
+
 .add-product-box input[type="file"],
 .add-product-box textarea,
 .add-product-box input[type="text"],
@@ -158,7 +158,7 @@ a {
   background-color: #1b5e20;
 }
 
-/* Footer */
+
 .footer {
   background-color: #2e7d32;
   color: white;
@@ -166,7 +166,7 @@ a {
   padding: 1.5rem;
   margin-top: 3rem;
 }
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .products-container {
     flex-direction: column;

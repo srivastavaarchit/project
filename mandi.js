@@ -7,7 +7,7 @@ function showRates() {
       return;
     }
   
-    // Static mock data – replace this with API call if needed
+    
     const rates = [
       { crop: "Wheat", price: "₹2100/qtl" },
       { crop: "Rice", price: "₹1950/qtl" },
