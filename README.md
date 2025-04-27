@@ -147,6 +147,7 @@ Open-source libraries (HTML, CSS, JavaScript templates)
 Final words
 
 Building Farm.AI was a journey to solve real farmer issues. We brainstormed hard, pivoted to focus on PIN-code based solutions, and learned a lot about agri-tech possibilities. Excited to grow this further!
+x
 
 
 
